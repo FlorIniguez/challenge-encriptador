@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador-Alura</title>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- iconos-->
+    <script
+      src="https://kit.fontawesome.com/7b51a38e49.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><img src="./imgs/Logo.png" alt="logo Alura" /></h1>
+      <main class="section-texto">
+        <section>
+          <textarea
+            name="ingrese-texto"
+            id="textarea-ingresado"
+            cols="30"
+            rows="5"
+            class="textarea-texto"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+        </section>
+
+        <section class="section-botones">
+          <p class="aclaracion">
+            <i class="fa-solid fa-circle-exclamation"> </i>
+            <span> Solo letras minúsculas y sin acentos</span>
+          </p>
+          <div class="contenedor-botones">
+            <button onclick="encriptar()" class="btn-azul btns">Encriptar</button>
+            <button onclick="desencriptar()" class="btn-gris btns">Desencriptar</button>
+          </div>
+        </section>
+      </main>
+      <aside class="msj-vacio" id="sinMensaje">
+      <img src="./imgs/Muñeco.png" alt="imagen de un muñeco" class="img-muñeco"/>
+      <p class="ningun-msj">Ningún mensaje fue encontrado</p>
+      <p class="p-encriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
+    </aside>
+     <aside class="encriptar" id="msj-encriptado" style="display: none;">
+        <p id="texto-revelado" class="texto-resultado"></p>
+        <button onclick="copiarMsjEncriptado()" class="btn-copiar">Copiar</button>
+      </aside> 
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

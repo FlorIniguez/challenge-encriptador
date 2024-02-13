@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #f3f5fc;
+  padding: 2em;
+}
+h1 {
+  margin: 1em;
+}
+.section-texto {
+  width: 50%;
+  margin: 10% auto;
+}
+/* TEXTAREA */
+.textarea-texto {
+  width: 100%;
+  height: 55vh;
+  font-size: 30px;
+  border: none;
+  color: #0a3871;
+  background-color: #f3f5fc;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  color: #0a3871;
+}
+
+.aclaracion {
+  font-size: 12px;
+  color: #495057;
+}
+.aclaracion i {
+  font-size: 17px;
+  padding: 0 0.5%;
+}
+/* BOTONES TEXAREA */
+.contenedor-botones {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.btns {
+  font-size: 14px;
+  width: 49%;
+  height: 5em;
+  border-radius: 24px;
+}
+.btn-azul {
+  background: #0a3871;
+  color: #ffffff;
+  border: none;
+}
+.btn-gris {
+  background: #d8dfe8;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
+
+/* --- ENCRIPTADOR --- */
+.msj-vacio,
+.encriptar {
+  height: 90vh;
+  background: #ffffff;
+  width: 21%;
+  border-radius: 32px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 10px 10px 5px 0px rgba(224, 224, 224, 1);
+}
+.img-muñeco {
+  margin: 50% auto 8%;
+  background-color: #ffffff;
+  max-width: 100%;
+  height: auto;
+}
+.ningun-msj {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 2em;
+}
+.p-encriptado {
+  padding: 1.5em 2em;
+}
+/* TEXTO ENCRIPTADO */
+.texto-resultado {
+  width: 75%;
+  color: #495057;
+  background-color: #ffffff;
+  margin: 10% auto 0 auto;
+  height: 73vh;
+ 
+}
+
+.btn-copiar {
+  font-size: 14px;
+  width: 80%;
+  height: 5em;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
