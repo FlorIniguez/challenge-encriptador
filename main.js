@@ -8,8 +8,19 @@ const cambiarAside = () => {
   mensajeEncriptado.style.display = "block";
 };
 
+// Función para verificar si el texto contiene letras mayúsculas o con acentos
+const validarTexto = (texto) => {
+  // Expresión regular para verificar si el texto contiene letras mayúsculas o con acentos
+  let regex = /[A-ZÁÉÍÓÚÜáéíóúü"#$%&'()*+,-./:;<=>@[\]^_`{|}~]/;
+  if (regex.test(texto)) {
+    alert("Por favor, ingresa solo letras minúsculas sin acentos.");
+    return false;
+  }
+  return true;
+};
+
 //objeto remplazos
-const reemplazos = {
+const remplazos = {
   'a': "ai",
   'e': "enter",
   'i': "imes",
@@ -19,44 +30,41 @@ const reemplazos = {
 
 const encriptar = () => {
   let contenido = texto.value;
+  if (!validarTexto(contenido)) return; // Validar el texto, si no cumple se detiene
   let letras = contenido.split("");
 
-  let resultado = letras
-    .map((letra) => {
-      if (reemplazos.hasOwnProperty(letra)) {
-        return reemplazos[letra];
-      } else {
-        return letra;
-      }
-    })
-    .join("");
+  let resultado = letras.map( letra => remplazos[letra] ? remplazos[letra] : letra).join('');
 
   revelarTexto.textContent = resultado;
   cambiarAside();
 };
 
+
 const desencriptar = () => {
   let contenido = texto.value;
-  let esEncriptado = false;
+  if (!validarTexto(contenido)) return; 
+  // Utilizamos una expresión regular para buscar todas las secuencias de reemplazo
+  let textoDesencriptado = contenido.replace(/(ai)|(enter)|(imes)|(ober)|(ufat)/g, (match) => {
+    // Por cada secuencia de reemplazo, devolvemos la vocal correspondiente
+    switch (match) {
+      case "ai":
+        return "a";
+      case "enter":
+        return "e";
+      case "imes":
+        return "i";
+      case "ober":
+        return "o";
+      case "ufat":
+        return "u";
+      default:
+        return match; // Si no hay coincidencia, devolvemos la misma secuencia
+    }
+  });
 
-  // Verificar si el contenido contiene algún valor de reemplazo
-  for (let letra in reemplazos) {
-    if (contenido.includes(reemplazos[letra])) {
-      esEncriptado = true;
-      break;
-    }
-  }
-  // Si es un texto encriptado, desencriptarlo; de lo contrario, mostrarlo directamente
-  if (esEncriptado) {
-    for (let letra in reemplazos) {
-      contenido = contenido.replace(new RegExp(reemplazos[letra], 'g'), letra);
-    }
-  }
-  
-  // Mostrar el texto desencriptado o el texto original en el área de texto
-  revelarTexto.textContent = contenido;
+  // Mostramos el texto desencriptado en el área de texto revelado
+  revelarTexto.textContent = textoDesencriptado;
 };
-
 
 // función utiliza la API del portapapeles del navegador para copiar el texto
 const copiarMsjEncriptado = async () => {
