@@ -12,14 +12,13 @@
 }
 .container {
   height: 100vh;
-  /* width: 100%; */
   display: flex;
   margin-bottom: 15px;
   margin-left: 10%;
 }
 
 /* TEXTAREA */
-.text-area {
+.ingrese-txt {
   width: 60%;
 }
 .textarea-texto {
@@ -92,10 +91,11 @@
   text-align: center;
   background-color: #ffffff;
 }
-.p-encriptado {
+.parrafo-encriptado {
   padding: 1em;
   background-color: #ffffff;
 }
+
 /* TEXTO ENCRIPTADO */
 .texto-resultado {
   width: 95%;
@@ -116,18 +116,25 @@
   background: #ffffff;
   color: #0a3871;
   border: 1px solid #0a3871;
-  /* margin-bottom: 5%; */
 }
 
 /* media queries */
 @media (max-width: 1090px) {
-  .ningun-msj {
-    font-size: 20px;
+  .container {
+    margin-left: 5%;
+  }
+  .encriptar,
+  .msj-vacio {
+    width: 27%;
+    height: 80vh;
+  }
+  .ingrese-txt {
+    width: 70%;
   }
 }
 @media (max-width: 768px) {
   .logo {
-    width: 15%;
+    width: 18%;
     margin-left: 0;
     margin-top: 7%;
   }
@@ -137,9 +144,9 @@
     align-items: center;
     width: 100%;
     margin: auto;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
-  .text-area {
+  .ingrese-txt {
     width: 90%;
   }
   .img-muñeco {
@@ -148,7 +155,7 @@
 
   .contenedor-botones {
     width: 100%;
-    margin: 2% auto;
+    margin: 3% auto;
   }
   .msj-vacio {
     width: 90%;
@@ -176,17 +183,25 @@
   }
 }
 @media (max-width: 450px) {
+  .logo {
+    width: 25%;
+  }
   .container {
     margin: auto;
   }
   .contenedor-botones {
     display: flex;
     flex-direction: column;
-    /* height: 158px; */
     gap: 15px;
   }
-  .text-area {
+  .ingrese-txt {
     margin-bottom: 10%;
+  }
+  .aclaracion {
+    margin-bottom: 7%;
+  }
+  .ningun-msj {
+    padding-bottom: 0;
   }
   .btns {
     height: 4em;
