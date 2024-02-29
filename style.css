@@ -121,20 +121,27 @@
 /* media queries */
 @media (max-width: 1090px) {
   .container {
-    margin-left: 5%;
+    margin-left: 4%;
+    height: 100vh;
+  }
+  .img-muñeco {
+    margin-top: 20%;
   }
   .encriptar,
   .msj-vacio {
     width: 27%;
-    height: 80vh;
+    height: 100%;
   }
   .ingrese-txt {
     width: 70%;
   }
+  .ningun-msj {
+    padding: 0.2em;
+  }
 }
 @media (max-width: 768px) {
   .logo {
-    width: 18%;
+    width: 15%;
     margin-left: 0;
     margin-top: 7%;
   }
@@ -185,7 +192,9 @@
 @media (max-width: 450px) {
   .logo {
     width: 20%;
- 
+  }
+  .container {
+    margin-bottom: 5%;
   }
   .contenedor-botones {
     display: flex;
@@ -209,8 +218,5 @@
   }
   .btn-copiar {
     height: 4em;
-  }
-  .ningun-msj, .encriptar {
-    margin-bottom: 10%;
   }
 }
