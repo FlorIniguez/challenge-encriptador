@@ -119,14 +119,23 @@
 }
 
 /* media queries */
+@media (max-width: 1400px) {
+  .img-muñeco {
+    margin-top: 10%;
+  }
+  .msj-vacio {
+    min-height: 90vh;
+  }
+  .ningun-msj {
+    padding: 0.3em;
+  }
+}
 @media (max-width: 1090px) {
   .container {
     margin-left: 4%;
     height: 100vh;
   }
-  .img-muñeco {
-    margin-top: 20%;
-  }
+
   .encriptar,
   .msj-vacio {
     width: 27%;
@@ -135,9 +144,7 @@
   .ingrese-txt {
     width: 70%;
   }
-  .ningun-msj {
-    padding: 0.2em;
-  }
+ 
 }
 @media (max-width: 768px) {
   .logo {
@@ -159,7 +166,6 @@
   .img-muñeco {
     display: none; /* Oculta la imagen en pantallas de 768px o menos */
   }
-
   .contenedor-botones {
     width: 100%;
     margin: 3% auto;
