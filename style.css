@@ -123,11 +123,12 @@
   .img-muñeco {
     margin-top: 10%;
   }
-  .msj-vacio {
-    min-height: 90vh;
+  .msj-vacio, .encriptar {
+  height: auto;
   }
   .ningun-msj {
-    padding: 0.3em;
+   padding-bottom: 1%;
+   margin-bottom: 1%;
   }
 }
 @media (max-width: 1090px) {
@@ -172,13 +173,11 @@
   }
   .msj-vacio {
     width: 90%;
-    height: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     padding: 0.8em;
   }
   .encriptar {
-    height: auto;
     width: 90%;
     margin-top: 5%;
     margin-bottom: 5%;
